@@ -5,10 +5,10 @@ class Iamx < Formula
   sha256 "0af787d0c30e511099268aeef36e1a8f248dec7180a7649cb0f470487615db5b"
   license "MIT"
 
-  depends_on "python@3.11"
+  depends_on "python@3.13"
 
   def install
-    system "python3", "-m", "pip", "install", "--prefix=#{libexec}", "iamx"
+    system Formula["python@3.13"].opt_bin/"python3", "-m", "pip", "install", "--prefix=#{libexec}", "iamx"
     bin.install Dir["#{libexec}/bin/*"]
     bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
