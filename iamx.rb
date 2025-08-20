@@ -5,7 +5,7 @@ class Iamx < Formula
   sha256 "0af787d0c30e511099268aeef36e1a8f248dec7180a7649cb0f470487615db5b"
   license "MIT"
 
-  depends_on "python@3.8"
+  depends_on "python@3.11"
 
   def install
     system "python3", "-m", "pip", "install", "--prefix=#{libexec}", "iamx"
